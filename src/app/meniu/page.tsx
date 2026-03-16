@@ -20,7 +20,9 @@ export const metadata: Metadata = {
   },
 };
 
-const MENU_PDF_PATH = '/menu/tridento-catalog.pdf';
+// Pentru GitHub Pages cu basePath /Tridento, fișierul PDF este servit de la:
+//   https://motanofficial.github.io/Tridento/menu/tridento-catalog.pdf
+const MENU_PDF_PATH = '/Tridento/menu/tridento-catalog.pdf';
 
 export default function MeniuPage() {
   return (

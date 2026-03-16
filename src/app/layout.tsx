@@ -71,11 +71,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/Tridento/favicon.ico',
+    shortcut: '/Tridento/favicon-16x16.png',
+    apple: '/Tridento/apple-touch-icon.png',
   },
-  manifest: '/site.webmanifest',
+  manifest: '/Tridento/site.webmanifest',
 };
 
 export default function RootLayout({
