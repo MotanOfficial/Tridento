@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fde047;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9a227;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circle background -->
+  <circle cx="50" cy="50" r="48" fill="url(#goldGrad)"/>
+  
+  <!-- Trident anchor shape -->
+  <g fill="#0a1929">
+    <!-- Main shaft -->
+    <rect x="46" y="35" width="8" height="45" rx="2"/>
+    
+    <!-- Top crossbar -->
+    <rect x="30" y="35" width="40" height="6" rx="2"/>
+    
+    <!-- Left prong -->
+    <path d="M30 35 L30 25 Q30 20 35 20 L38 20 L38 35 Z" />
+    
+    <!-- Middle prong -->
+    <path d="M46 35 L46 15 Q50 10 54 15 L54 35 Z" />
+    
+    <!-- Right prong -->
+    <path d="M62 35 L62 25 Q62 20 65 20 L70 20 L70 35 Z" />
+    
+    <!-- Bottom curve -->
+    <path d="M42 75 Q50 85 58 75 L58 80 Q50 90 42 80 Z"/>
+  </g>
+</svg>
