@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-12 h-12">
                 <Image
-                  src="/mini-logo.png"
+                  src="/Tridento/mini-logo.png"
                   alt="Tridento Logo"
                   fill
                   className="object-contain"

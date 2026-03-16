@@ -26,7 +26,7 @@ export default function QRCodeSection({
                 <div className="bg-white p-4 md:p-6 rounded-2xl shadow-2xl">
                   <div className="relative w-44 h-44 md:w-52 md:h-52">
                     <Image
-                      src="/qr-code.png"
+                      src="/Tridento/qr-code.png"
                       alt="QR Code Meniu Tridento"
                       fill
                       className="object-contain"
@@ -54,7 +54,7 @@ export default function QRCodeSection({
                     </Button>
                   </Link>
                   <a 
-                    href="/menu/tridento-catalog.pdf" 
+                    href="/Tridento/menu/tridento-catalog.pdf" 
                     download
                     className="text-gold-500 hover:text-gold-400 transition-colors underline underline-offset-4"
                   >

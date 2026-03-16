@@ -94,16 +94,6 @@ export default function MeniuPage() {
           </div>
         </div>
 
-        {/* Alternative Text */}
-        <div className="text-center text-navy-400 mb-12">
-          <p className="mb-2">
-            Nu poți vedea PDF-ul? Încearcă să îl descarci sau să îl deschizi într-un tab nou.
-          </p>
-          <p>
-            PDF-ul este pregătit pentru a fi adăugat în: <code className="text-gold-400 bg-navy-800 px-2 py-1 rounded">public/menu/tridento-catalog.pdf</code>
-          </p>
-        </div>
-
         {/* QR Section */}
         <div className="card-elegant rounded-2xl p-6 md:p-8 max-w-2xl mx-auto text-center">
           <QrCode className="w-12 h-12 text-gold-500 mx-auto mb-4" />

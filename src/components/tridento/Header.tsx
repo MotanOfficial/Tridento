@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 md:w-12 md:h-12">
               <Image
-                src="/mini-logo.png"
+                src="/Tridento/mini-logo.png"
                 alt="Tridento Logo"
                 fill
                 className="object-contain group-hover:scale-105 transition-transform"
