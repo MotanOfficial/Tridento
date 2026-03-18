@@ -4,43 +4,30 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Camera } from 'lucide-react';
 
-// Gallery images - these would be replaced with actual food photos
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
-    alt: 'Preparat gourmet elegant',
-    category: 'Specialități',
+    src: '/Tridento/restaurant1.png',
+    alt: 'Restaurant Tridento - Ambient 1',
+    category: 'Restaurant',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
-    alt: 'Preparat premium',
-    category: 'Principal',
+    src: '/Tridento/restaurant2.png',
+    alt: 'Restaurant Tridento - Ambient 2',
+    category: 'Restaurant',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80',
-    alt: 'Fructe de mare proaspete',
-    category: 'Marine',
+    src: '/Tridento/restaurant3.png',
+    alt: 'Restaurant Tridento - Ambient 3',
+    category: 'Restaurant',
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80',
-    alt: 'Desert elegant',
-    category: 'Desert',
-  },
-  {
-    id: 5,
-    src: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80',
-    alt: 'Saladă gourmet',
-    category: 'Salate',
-  },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80',
-    alt: 'Pește la grătar',
-    category: 'Marine',
+    src: '/Tridento/restaurant4.png',
+    alt: 'Restaurant Tridento - Ambient 4',
+    category: 'Restaurant',
   },
 ];
 

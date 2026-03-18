@@ -120,6 +120,79 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* =========================
+   PRINT / PDF (Catalog)
+   ========================= */
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    overflow: visible !important;
+  }
+
+  /* Hide site chrome in print/PDF */
+  header,
+  footer {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* Avoid clipped shadows/overlays and keep layout stable */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Prevent decorative overlays from printing/cropping content */
+  .card-glow::before {
+    content: none !important;
+  }
+
+  /* Restore the rounded premium card look (print-safe) */
+  .card-elegant,
+  .card-glow {
+    overflow: hidden !important;
+    border-radius: 24px !important;
+    background: #fffdf6 !important;
+    border: 1px solid rgba(0, 0, 0, 0.18) !important;
+    box-shadow:
+      0 10px 26px rgba(0, 0, 0, 0.10),
+      0 2px 8px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(212, 175, 55, 0.18) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Small inner safety padding to avoid “cut” on tight page breaks */
+  .card-elegant > *:last-child,
+  .card-glow > *:last-child {
+    padding-bottom: 1px;
+  }
+
+  /* Reduce risk of cards being cut across pages */
+  .card-elegant,
+  [data-slot="chart"],
+  section,
+  article {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
 /* Headings elegante - folosesc variabila Playfair Display */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), Georgia, serif;

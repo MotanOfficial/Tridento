@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { href: '/', label: 'Acasă' },
@@ -48,9 +47,8 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA & Theme Toggle */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <ThemeToggle />
             <Link href="/meniu">
               <Button className="btn-gold px-6 py-2 rounded-full">
                 Vezi Meniul
@@ -60,7 +58,6 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-3">
-            <ThemeToggle />
             <button
               className="p-2 text-white hover:text-gold-500 transition-colors"
               onClick={() => setIsOpen(!isOpen)}
