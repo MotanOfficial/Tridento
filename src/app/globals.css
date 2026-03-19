@@ -128,16 +128,9 @@ body {
     margin: 14mm;
   }
 
-  html,
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-    overflow: visible !important;
-  }
-
-  /* Hide site chrome in print/PDF */
-  header,
-  footer {
+  /* Hide doar header/footer-ul global în print (nu și header-ele interne, ex. pe flyer) */
+  body > header,
+  body > footer {
     display: none !important;
   }
 
@@ -145,10 +138,22 @@ body {
     padding-top: 0 !important;
   }
 
-  /* Avoid clipped shadows/overlays and keep layout stable */
-  *,
-  *::before,
-  *::after {
+  /* Catalog layout: fundal alb, text negru */
+  .catalog-print {
+    background: #ffffff !important;
+    color: #000000 !important;
+    overflow: visible !important;
+  }
+
+  /* Ascunde butonul Înapoi sus în orice pagină printată */
+  button[aria-label="Înapoi sus"] {
+    display: none !important;
+  }
+
+  /* Avoid clipped shadows/overlays and keep layout stable (doar în catalog) */
+  .catalog-print *,
+  .catalog-print *::before,
+  .catalog-print *::after {
     box-shadow: none !important;
     text-shadow: none !important;
     filter: none !important;
@@ -158,13 +163,13 @@ body {
   }
 
   /* Prevent decorative overlays from printing/cropping content */
-  .card-glow::before {
+  .catalog-print .card-glow::before {
     content: none !important;
   }
 
   /* Restore the rounded premium card look (print-safe) */
-  .card-elegant,
-  .card-glow {
+  .catalog-print .card-elegant,
+  .catalog-print .card-glow {
     overflow: hidden !important;
     border-radius: 24px !important;
     background: #fffdf6 !important;
@@ -178,16 +183,16 @@ body {
   }
 
   /* Small inner safety padding to avoid “cut” on tight page breaks */
-  .card-elegant > *:last-child,
-  .card-glow > *:last-child {
+  .catalog-print .card-elegant > *:last-child,
+  .catalog-print .card-glow > *:last-child {
     padding-bottom: 1px;
   }
 
   /* Reduce risk of cards being cut across pages */
-  .card-elegant,
-  [data-slot="chart"],
-  section,
-  article {
+  .catalog-print .card-elegant,
+  .catalog-print [data-slot="chart"],
+  .catalog-print section,
+  .catalog-print article {
     break-inside: avoid;
     page-break-inside: avoid;
   }

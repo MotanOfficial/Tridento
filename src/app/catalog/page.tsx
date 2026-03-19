@@ -146,7 +146,7 @@ function SectionTitle({
 
 export default function CatalogPage() {
   return (
-    <div className="bg-navy-950 text-white print:bg-white print:text-black">
+    <div className="catalog-print bg-navy-950 text-white">
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-hero print:bg-white">
         <div className="absolute inset-0 opacity-10 pointer-events-none print:hidden">
